@@ -1,0 +1,25 @@
+.homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+    &__text {
+        max-width: 500px;
+        width: 90%;
+        &-title {
+            text-align: start;
+            span {
+                color: #4169E1;
+            }
+        }
+    }
+    &__image {
+        max-width: 700px;
+        img {
+            width: 100%;
+        }
+    }
+    @media(max-width: 600px) {
+        flex-direction: column;
+    }
+}
