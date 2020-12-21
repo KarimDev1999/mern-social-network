@@ -21,7 +21,7 @@ const Login = () => {
     }
 
 
-    const submit = async (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
         try {
             const user = { email, password };
@@ -43,7 +43,7 @@ const Login = () => {
     return (
         <div className='login'>
             <h1>Login</h1>
-            <form className="form" onSubmit={submit}>
+            <form className="form" onSubmit={onSubmit}>
                 <label htmlFor="email">email</label>
                 <input onChange={onEmailChange} type="email" placeholder='enter your email' />
                 <label htmlFor="password">password</label>
