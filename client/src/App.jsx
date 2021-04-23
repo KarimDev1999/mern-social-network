@@ -17,7 +17,7 @@ const App = () => {
       try {
         setLoading(true);
         if (localStorage.getItem('userData')) {
-          let res = await axios.post('api/users/tokenIsValid', null, { headers: { Authorization: `Bearer ${localStorage.getItem('userData')}` } });
+          let res = await axios.post('https://mern-social-network-test.herokuapp.com/api/users/tokenIsValid', null, { headers: { Authorization: `Bearer ${localStorage.getItem('userData')}` } });
           if (res.data.auth) {
             setAuth(true);
             setLoggedInUser(res.data.user)
